@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f1e8">
+    <title>Storymode — your next story starts here</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <a class="wordmark" href="/" aria-label="Storymode home">
+          <span class="wordmark-icon" aria-hidden="true">✳</span>
+          storymode
+        </a>
+        <span class="header-note">A little imagination goes a long way.</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR STORY, YOUR RULES</p>
+        <h1 id="page-title">Every great story<br>starts <span>somewhere.</span></h1>
+        <p class="intro-copy">Bring a spark of an idea, set the mood, and build your story one chapter at a time.</p>
+      </section>
+
+      <div class="workspace">
+        <form id="story-form" class="story-form">
+          <label class="field-label" for="idea">THE STARTING POINT</label>
+          <textarea id="idea" name="idea" rows="4" maxlength="2000" required placeholder="A lighthouse keeper receives a letter addressed to someone who disappeared a hundred years ago..."></textarea>
+          <div class="field-hint"><span>It can be a sentence, a character, or a whole what-if.</span><span id="idea-count">0 / 2000</span></div>
+
+          <div class="options">
+            <label>
+              <span class="field-label">GENRE</span>
+              <select name="genre">
+                <option>Fantasy</option>
+                <option>Adventure</option>
+                <option>Mystery</option>
+                <option>Science fiction</option>
+                <option>Romance</option>
+                <option>Fairy tale</option>
+                <option>Horror</option>
+                <option>Surprise me</option>
+              </select>
+            </label>
+            <label>
+              <span class="field-label">MOOD</span>
+              <select name="tone">
+                <option>Wonder-filled</option>
+                <option>Whimsical</option>
+                <option>Heartwarming</option>
+                <option>Suspenseful</option>
+                <option>Atmospheric</option>
+                <option>Funny</option>
+                <option>Melancholy</option>
+              </select>
+            </label>
+            <label>
+              <span class="field-label">LENGTH</span>
+              <select name="length">
+                <option value="short">A quick read</option>
+                <option value="medium" selected>A little escape</option>
+                <option value="long">Settle in</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field-label extra-label" for="details">ANYTHING ELSE? <span>OPTIONAL</span></label>
+          <input id="details" name="details" type="text" maxlength="500" placeholder="A character, a twist, a place to end up...">
+
+          <button id="generate-button" class="generate-button" type="submit">
+            <span id="button-label">Begin Chapter 1</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="privacy-note">Your idea stays yours. Stories are generated just for you.</p>
+        </form>
+
+        <section id="story-panel" class="story-panel" aria-live="polite" aria-labelledby="story-heading">
+          <div id="empty-state" class="empty-state">
+            <span class="empty-mark" aria-hidden="true">✳</span>
+            <p class="empty-title">A blank page is full of possibility.</p>
+            <p>Your first chapter will appear here when you're ready.</p>
+            <span class="scribble" aria-hidden="true">✳</span>
+          </div>
+          <article id="story-result" class="story-result" hidden>
+            <p class="eyebrow">YOUR STORY, UNFOLDING</p>
+            <h2 id="story-heading">Your story</h2>
+            <div id="story-text" class="story-text"></div>
+            <section id="continuation-panel" class="continuation-panel" aria-labelledby="continuation-heading">
+              <h3 id="continuation-heading">Where should it go next?</h3>
+              <p>Choose an idea, write your own direction, or combine both.</p>
+              <div id="continuation-options" class="continuation-options"></div>
+              <label class="sr-only" for="custom-direction">Your own direction for the next chapter</label>
+              <textarea id="custom-direction" class="custom-direction" rows="2" maxlength="1000" placeholder="Or write your own idea for what happens next..."></textarea>
+            </section>
+            <div class="story-actions">
+              <button id="copy-button" class="secondary-button" type="button">Copy story</button>
+              <button id="next-chapter-button" class="secondary-button" type="button">Continue story ↗</button>
+              <button id="new-story-button" class="secondary-button" type="button">New story</button>
+            </div>
+          </article>
+          <div id="loading-state" class="loading-state" hidden>
+            <span class="loader" aria-hidden="true"></span>
+            <p id="loading-message">Finding the right words...</p>
+            <span id="loading-subtitle" class="loading-subtitle">Good stories take a little imagination.</span>
+          </div>
+          <div id="error-state" class="error-state" role="alert" hidden></div>
+        </section>
+      </div>
+      <footer>MADE FOR THE STORIES ONLY YOU CAN IMAGINE <span aria-hidden="true">✳</span></footer>
+    </main>
+  </body>
+</html>
