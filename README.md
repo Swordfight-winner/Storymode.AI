@@ -1,2 +1,2 @@
 # Storymode.AI
-An AI designed to write stories based on prompts, tell it the way you want your story to go and it will write it for you.
+An AI designed to write stories based on prompts, tell it the way you want your story to go and it will write it for you. You can choose how it writes your story by choosing the genre of your story (example: Shakespearian, Wild west, Normal drama, etc). Changing the style also changes the font so its more immersive. Everything is free. Infinite uses, use for 1hr to earn a point 15 points grant VIP for 30 days 45 points gets you VIP+ which is basically permanent VIP (NO SUBSCRIPTIONS)
